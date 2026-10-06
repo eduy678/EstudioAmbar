@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../sobre-html-css/sobre.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+</head>
+
+
+
+<body>
+    <header>
+        <nav id="nav">
+            <p>Estúdio Âmbar</p>
+
+            <button class="hamburguer" id="btn-menu" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li id="menu">
+                    <a id="cor" href="../portifolio-html-css/portifolio.html">Portifólio</a>
+                    <ul id="submenu">
+                        <li><a href="../retratos-html-css/retratos.html">Retratos</a></li>
+                        <li><a href="../lugares-html-css/lugares.html">Lugares</a></li>
+                        <li><a href="../fashion-html-css/fashion.html">Fashion</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="../sobre-html-css/sobre.html">Sobre</a>
+            <a href="../contato-html-css/contato.html">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section id="conteudo">
+
+            <section id="textos">
+                <h1>Biografia</h1>
+                <p>
+                    O Estúdio Âmbar nasceu da união entre criatividade, sensibilidade e o propósito de transformar
+                    momentos significativos em imagens que permanecem ao longo do tempo. Acreditamos que a fotografia
+                    não se limita ao registro de um instante, mas representa uma forma de preservar histórias,
+                    identidades e emoções.<br>
+
+                    Nossa trajetória começou a partir do interesse em explorar a fotografia como uma linguagem capaz de
+                    comunicar sentimentos e contar histórias sem a necessidade de palavras. A partir dessa visão, surgiu
+                    a proposta de criar um estúdio que valorizasse não apenas a qualidade técnica das imagens, mas
+                    também a experiência e a individualidade de cada cliente.<br>
+
+                    Atuamos na criação de retratos, ensaios fotográficos, registros de momentos especiais e projetos
+                    personalizados, desenvolvendo cada trabalho de maneira cuidadosa e alinhada aos objetivos de quem
+                    nos procura. Nosso processo combina planejamento, direção criativa, composição e atenção aos
+                    detalhes para alcançar resultados autênticos e visualmente marcantes.<br>
+
+                    Um dos principais diferenciais do Estúdio Âmbar está na forma como entendemos cada projeto. Em vez
+                    de seguir fórmulas prontas, buscamos compreender a personalidade, a história e as expectativas de
+                    cada cliente. Essa abordagem nos permite desenvolver fotografias que representam pessoas e momentos
+                    de maneira mais natural, criando resultados únicos e personalizados.<br>
+
+
+
+
+                    Nosso objetivo é construir uma identidade sólida no mercado fotográfico, reconhecida pela qualidade,
+                    criatividade e atenção aos detalhes. A cada novo projeto, buscamos não apenas entregar boas imagens,
+                    mas criar um trabalho que tenha significado e que possa ser valorizado mesmo muitos anos depois.<br>
+
+                    No Estúdio Âmbar, cada fotografia representa uma história. Nosso propósito é transformar essas
+                    histórias em imagens capazes de atravessar o tempo.<br>
+
+                    <strong>Estúdio Âmbar — fotografia para histórias que permanecem.</strong><br>
+
+                    <i>O Estúdio Âmbar é uma empresa fictícia criada para fins demonstrativos.</i>
+                </p>
+            </section>
+            <img src="./sobre-imagem/foto-editada.jpg">
+        </section>
+    </main>
+
+    <script>
+        const nav = document.getElementById('nav');
+        const btn = document.getElementById('btn-menu');
+        const menu = document.getElementById('menu');
+        const cor = document.getElementById('cor');
+
+        btn.addEventListener('click', () => {
+            const aberto = nav.classList.toggle('aberto');
+            btn.classList.toggle('ativo', aberto);
+            btn.setAttribute('aria-expanded', aberto);
+        });
+
+        cor.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                menu.classList.toggle('aberto');
+            }
+        });
+    </script>
+</body>
+
+</html>

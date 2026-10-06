@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estúdio Âmbar</title>
+</head>
+
+<body>
+  <header>
+    <nav id="nav">
+      <p>Estúdio Âmbar</p>
+
+      <button class="hamburguer" id="btn-menu" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul>
+        <li id="menu">
+          <a id="cor" href="./portifolio-html-css/portifolio.html">Portifólio</a>
+          <ul id="submenu">
+            <li><a href="./retratos-html-css/retratos.html">Retratos</a></li>
+            <li><a href="./lugares-html-css/lugares.html">Lugares</a></li>
+            <li><a href="./fashion-html-css/fashion.html">Fashion</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="./sobre-html-css/sobre.html">Sobre</a>
+      <a href="./contato-html-css/contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <footer>
+    <a href="#">Política de Privacidade</a>
+    <a href="#" id="meio">Política de Cookies</a>
+    <p>© 2035 Feito Por Luiz Eduardo</p>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    const btn = document.getElementById('btn-menu');
+    const menu = document.getElementById('menu');
+    const cor = document.getElementById('cor');
+
+    // Abre/fecha o menu hambúrguer
+    btn.addEventListener('click', () => {
+      const aberto = nav.classList.toggle('aberto');
+      btn.classList.toggle('ativo', aberto);
+      btn.setAttribute('aria-expanded', aberto);
+    });
+
+    // Abre/fecha o submenu ao tocar (só em telas pequenas)
+    cor.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        menu.classList.toggle('aberto');
+      }
+    });
+  </script>
+</body>
+
+</html>

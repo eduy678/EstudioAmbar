@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../retratos-html-css/retratos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retratos</title>
+</head>
+
+<body>
+  <header>
+    <nav id="nav">
+      <p>Estúdio Âmbar</p>
+
+      <button class="hamburguer" id="btn-menu" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul>
+        <li id="menu">
+          <a id="cor" href="../portifolio-html-css/portifolio.html">Portifólio</a>
+          <ul id="submenu">
+            <li><a href="../retratos-html-css/retratos.html">Retratos</a></li>
+            <li><a href="../lugares-html-css/lugares.html">Lugares</a></li>
+            <li><a href="../fashion-html-css/fashion.html">Fashion</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="../sobre-html-css/sobre.html">Sobre</a>
+      <a href="../contato-html-css/contato.html">Contato</a>
+
+    </nav>
+  </header>
+  <main>
+    <h1>Retratos</h1>
+    <img class="imagem" src="../retratos-html-css/retratos-imagens/pexels-andiravsanjani-16994249.jpg" alt="">
+    <img class="imagem" src="../retratos-html-css/retratos-imagens/pexels-breno-cardoso-149064345-10903157.jpg" alt="">
+    <img class="imagem" src="../retratos-html-css/retratos-imagens/pexels-iitsbruna-18812401.jpg" alt="">
+    <img class="imagem" src="../retratos-html-css/retratos-imagens/pexels-matteus-bernardes-1329513-2559875.jpg" alt="">
+    <img class="imagem" src="../retratos-html-css/retratos-imagens/pexels-who0ne-31643653.jpg" alt="">
+    <img class="imagem" src="../retratos-html-css/retratos-imagens/pexels-wolfart-20854680.jpg" alt="">
+  </main>
+
+  </main>
+
+  <script>
+    const nav = document.getElementById('nav');
+    const btn = document.getElementById('btn-menu');
+    const menu = document.getElementById('menu');
+    const cor = document.getElementById('cor');
+
+    btn.addEventListener('click', () => {
+      const aberto = nav.classList.toggle('aberto');
+      btn.classList.toggle('ativo', aberto);
+      btn.setAttribute('aria-expanded', aberto);
+    });
+
+    cor.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        menu.classList.toggle('aberto');
+      }
+    });
+  </script>
+</body>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../portifolio-html-css/portifolio.css">
+  <title>portifólio</title>
+</head>
+
+<body>
+  <header>
+    <nav id="nav">
+      <p>Estúdio Âmbar</p>
+
+      <button class="hamburguer" id="btn-menu" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul>
+        <li id="menu">
+          <a id="cor" href="../portifolio-html-css/portifolio.html">Portifólio</a>
+          <ul id="submenu">
+            <li><a href="../retratos-html-css/retratos.html">Retratos</a></li>
+            <li><a href="../lugares-html-css/lugares.html">Lugares</a></li>
+            <li><a href="../fashion-html-css/fashion.html">Fashion</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="../sobre-html-css/sobre.html">Sobre</a>
+      <a href="../contato-html-css/contato.html">Contato</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Trabalhos</h1>
+    <section>
+      <a href="../retratos-html-css/retratos.html">
+        <div class="imagem1 flex">
+          <p class="titulo">Retratos</p>
+        </div>
+      </a>
+
+      <a href="../lugares-html-css/lugares.html">
+        <div class="imagem2 flex">
+          <p>Lugares</p>
+        </div>
+      </a>
+
+      <a href="../fashion-html-css/fashion.html">
+        <div class="imagem3 flex">
+          <p>Fashion</p>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  </main>
+
+  <script>
+    const nav = document.getElementById('nav');
+    const btn = document.getElementById('btn-menu');
+    const menu = document.getElementById('menu');
+    const cor = document.getElementById('cor');
+
+    btn.addEventListener('click', () => {
+      const aberto = nav.classList.toggle('aberto');
+      btn.classList.toggle('ativo', aberto);
+      btn.setAttribute('aria-expanded', aberto);
+    });
+
+    cor.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        menu.classList.toggle('aberto');
+      }
+    });
+  </script>
+</body>
+</body>
+
+</html>
